@@ -70,6 +70,16 @@ Configure a Python virtual environment and install the Pip packages for CounterF
             .\.venv\Scripts\Activate.ps1
             ```
 
+            > If you get an error about running scripts being disabled on this system, you will need to enable running scripts by setting an appropriate execution policy. You can do this by launching PowerShell as an administrator, then running the following command:
+
+            ```powershell
+            Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+            ```
+
+            Enter `Y` when asked to confirm. Then re-launch PowerShell and try again.
+
+            You can reset this execution policy at a later date if needed. You can read more on this in the [Execution Policies page on Microsoft Docs](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies?WT.mc_id=academic-17441-jabenn).
+
     * On macOS or Linux, run:
 
         ```cmd
@@ -149,7 +159,7 @@ Create a Python application to print `"Hello World"` to the console.
 
     If you don't have `.venv` as a prefix on the prompt, the virtual environment is not active in the terminal.
 
-1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``. The new terminal will load the virtual environment, and the the call to activate this will appear in the terminal. The prompt will also have the name of the virtual environment (`.venv`):
+1. Launch a new VS Code Terminal by selecting *Terminal -> New Terminal, or pressing `` CTRL+` ``. The new terminal will load the virtual environment, and the call to activate this will appear in the terminal. The prompt will also have the name of the virtual environment (`.venv`):
 
     ```output
     ➜  nightlight source .venv/bin/activate
